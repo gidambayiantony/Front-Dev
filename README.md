@@ -27,10 +27,9 @@ You can use this HTML code to create a frontend developer profile webpage. You c
 
 The webpage includes basic styling using CSS to make it visually appealing. The background color is set to a light gray (#fafafa), and the font color for the frontend profile is blue.
 
-## Contributors
+## AUTHOR 
 
 - [Anthony Gidambayi](mailto:gidambayiantony@gmail.com)
-- [Mary G](mailto:mariwamuyu@gmail.com)
 
 ## License
 
