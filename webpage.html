@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Page Creation with Specific Elements</title>
     <style>
         h1 {
@@ -9,7 +10,6 @@
             font-size: 36px;
             margin-top: 0;
             text-align: center;
-            color: blue; /* Changed font color to blue */
         }
 
         p {
@@ -24,8 +24,7 @@
         }
 
         body {
-            background-color: #007BFF; /* Changed background color to blue */
-            color: white; /* Changed font color to white */
+            background-color: #fafafa;
         }
 
         .container {
@@ -34,19 +33,18 @@
         }
     </style>
 </head>
-
 <body>
-    <h1 style="text-align:center">My Frontend Profile</h1>
+    <h1>My Frontend Profile</h1>
     <div class="container">
         <p>
             <strong>Slack Name:</strong> <span data-testid="slackUserName">Antony Gidambayi</span>
         </p>
         <img src="https://ca.slack-edge.com/T05FFAA91JP-U05RRGQSRLZ-a4ea1e5a0106-512" alt="Antony Gidambayi" data-testid="slackDisplayImage">
         <p>
-            <strong>Current Day of the Week:</strong> <span data-testid="currentDayOfTheWeek">Sunday</span> <!-- Changed to Sunday -->
+            <strong>Current Day of the Week:</strong> <span data-testid="currentDayOfTheWeek">Sunday</span>
         </p>
         <p>
-            <strong>Current UTC Time:</strong> <span data-testid="currentUTCTime"></span>
+            <strong>Current UTC Time:</strong> <span data-testid="currentUTCTime">1656602343000</span>
         </p>
         <p>
             <strong>Track:</strong> <span data-testid="myTrack">Front end Engineer</span>
@@ -56,13 +54,18 @@
         </p>
     </div>
     <script>
+        // Get the current day of the week
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const currentDayOfWeek = new Date().getDay();
+        const currentDay = daysOfWeek[currentDayOfWeek];
+
         // Get the current UTC time in milliseconds
         const currentUTCTime = new Date().getTime();
 
         // Update the DOM elements with the current data
+        document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = currentDay;
         document.querySelector("[data-testid='currentUTCTime']").textContent = currentUTCTime;
     </script>
 </body>
-
 </html>
 
